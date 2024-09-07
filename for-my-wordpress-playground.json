@@ -1,0 +1,55 @@
+{
+  "$schema": "https://playground.wordpress.net/blueprint-schema.json",
+  "meta": {
+    "title": "Theme Tester",
+    "description": "Blueprint example to add content and plugins to explore a theme",
+    "author": "tbshiki",
+    "categories": [
+      "test"
+    ]
+  },
+  "preferredVersions": {
+    "php": "8.1",
+    "wp": "latest"
+  },
+  "features": {},
+  "landingPage": "/",
+  "steps": [
+    {
+      "step": "login",
+      "username": "admin",
+      "password": "password"
+    },
+    {
+      "step": "setSiteLanguage",
+      "language": "ja"
+    },
+    {
+      "step": "installTheme",
+      "themeZipFile": {
+        "resource": "wordpress.org/themes",
+        "slug": "twentytwentyfour"
+      },
+      "options": {
+        "activate": true
+      }
+    },
+    {
+      "step": "installPlugin",
+      "pluginZipFile": {
+        "resource": "wordpress.org/plugins",
+        "slug": "create-block-theme"
+      },
+      "progress": {
+        "weight": 2
+      }
+    },
+    {
+      "step": "importWxr",
+      "file": {
+        "resource": "url",
+        "url": "https://raw.githubusercontent.com/jawordpressorg/theme-test-data-ja/master/wordpress-theme-test-data-ja.xml"
+      }
+    }
+  ]
+}
