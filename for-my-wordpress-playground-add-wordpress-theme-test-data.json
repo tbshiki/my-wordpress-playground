@@ -61,6 +61,13 @@
         "resource": "wordpress.org/plugins",
         "slug": "create-block-theme"
       }
+    },
+    {
+      "step": "importWxr",
+      "file": {
+        "resource": "url",
+        "url": "https://raw.githubusercontent.com/jawordpressorg/theme-test-data-ja/master/wordpress-theme-test-data-ja.xml"
+      }
     }
   ]
 }
