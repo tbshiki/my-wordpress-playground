@@ -17,7 +17,8 @@
   ],
   "landingPage": "/wp-admin/index.php",
   "features": {
-    "networking": true
+    "networking": true,
+    "fileSystem": true
   },
   "steps": [
     {
@@ -64,6 +65,11 @@
         "resource": "wordpress.org/plugins",
         "slug": "create-block-theme"
       }
+    },
+    {
+      "step": "execute",
+      "command": "wp core update",
+      "caption": "Updating WordPress Core"
     }
   ]
 }
