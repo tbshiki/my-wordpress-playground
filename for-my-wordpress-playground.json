@@ -16,6 +16,9 @@
     "kitchen-sink"
   ],
   "landingPage": "/wp-admin/index.php",
+  "features": {
+    "networking": true
+  },
   "steps": [
     {
       "step": "login",
@@ -23,29 +26,29 @@
       "password": "password"
     },
     {
-      "step":"mkdir",
-      "path":"/wordpress/wp-content/languages/plugins"
+      "step": "mkdir",
+      "path": "/wordpress/wp-content/languages/plugins"
     },
     {
-      "step":"mkdir",
-      "path":"/wordpress/wp-content/languages/themes"
+      "step": "mkdir",
+      "path": "/wordpress/wp-content/languages/themes"
     },
     {
-      "step":"writeFile",
-      "path":"/wordpress/wp-content/languages/ja_JA.mo",
-      "data":{
-          "resource":"url",
-          "caption":"Downloading ja_JA.mo",
-          "url":"https://translate.wordpress.org/projects/wp/dev/ja/default/export-translations?format=mo"
+      "step": "writeFile",
+      "path": "/wordpress/wp-content/languages/ja_JA.mo",
+      "data": {
+        "resource": "url",
+        "caption": "Downloading ja_JA.mo",
+        "url": "https://translate.wordpress.org/projects/wp/dev/ja/default/export-translations?format=mo"
       }
     },
     {
-      "step":"writeFile",
-      "path":"/wordpress/wp-content/languages/admin-ja_JA.mo",
-      "data":{
-          "resource":"url",
-          "caption":"Downloading admin-ja_JA.mo",
-          "url":"https://translate.wordpress.org/projects/wp/dev/admin/ja/default/export-translations?format=mo"
+      "step": "writeFile",
+      "path": "/wordpress/wp-content/languages/admin-ja_JA.mo",
+      "data": {
+        "resource": "url",
+        "caption": "Downloading admin-ja_JA.mo",
+        "url": "https://translate.wordpress.org/projects/wp/dev/admin/ja/default/export-translations?format=mo"
       }
     },
     {
